@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    background-color: rgba(231,131,243,.9);
+    z-index: 10;
+}
+
+
+@media screen and (max-width: 720px) {
+
+    .nav {
+        display: none;
+    }
+}
+
+.nav-options {
+    display: flex;
+}
+
+.nav-options > a {
+padding-right: 20px;
+padding-left: 20px;
+color: black;
+cursor: pointer;
+background-color: rgba(231,131,243,.9);
+}
+
+.nav-options > a:hover {
+    padding-right: 5px;
+    padding-left: 5px;
+    color: white;
+    transform: scale(1.1, 1.1)
+    }
+
+.header {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    z-index: 3;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.main-image {
+    margin: auto;
+    background-image: url('/images/skull.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+}
+
+@media screen and (min-width: 720px) {
+
+    .main-image {
+        height: 600px;
+        width: 600px;
+    }
+}
+
+.main-text {
+    color: white;
+    display: block;
+    text-align: center;
+    line-height: 50px
+}
+
+.program {
+    color: white;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.hotel {
+    display: flex;
+    color: white;
+    line-height: 40px;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 720px) {
+
+    .hotel {
+        flex-direction: column;
+    }
+}
+.hotel-image {
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.hotel-image:hover {
+    transform: scale(1.05, 1.05)
+}
+
+.hotel-header {
+    display: block;
+    text-align: center;
+}
+
+.hotel-tablet {
+    display: block;
+    text-align: center;
+}
+
+button {
+    padding: 25px 30px;
+    background-color: #050801;
+    color: rgba(231,131,243,.9);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  
+  button:hover{
+      background: rgba(231,131,243,.9);
+      color: rgba(231,131,243,.9);
+      box-shadow: 0 0 5px rgba(231,131,243,.9),
+                  0 0 25px rgba(231,131,243,.9),
+                  0 0 50px rgba(231,131,243,.9),
+                  0 0 200px rgba(231,131,243,.9);
+       -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+  }
+
+  .roseright {
+    position: absolute;
+    right: -4px;
+    top: 200px;
+    z-index: 0;
+  }
+
+  .roseleft {
+    position: absolute;
+    top: 200px;
+    z-index: 0;
+  }
+
+  @media screen and (max-width: 1000px) {
+
+    .roseright {
+        display: none;
+    }
+
+    .roseleft {
+        display: none;
+    }
+}
+
+.divider {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration:none;
+    color:#FFF;
+  }
+  .rainbow-button {
+    --primary-neon:rgba(231,131,243,.9);
+    --light-neon:rgba(159,87,161,.7);
+    --pulse-neon:rgba(159,87,161,.5);
+    --bright-neon:rgba(159,87,161,1);
+    --off-neon:#333;
+    
+    --neon-shadow:0 0 7px 4px var(--light-neon), 0 0 7px 4px var(--light-neon) inset;
+    --neon-shadow-pulse:0 0 8px 5px var(--pulse-neon), 0 0 8px 5px var(--pulse-neon) inset;
+    --neon-shadow-bright:0 0 8px 4px var(--bright-neon), 0 0 8px 4px var(--bright-neon) inset;
+    --neon-shadow-text:0 0 7px var(--primary-neon);
+    
+    width:calc(20vw + 6px);
+    height:calc(8vw + 6px);
+    color:var(--primary-neon);
+    text-shadow:var(--neon-shadow-text);
+    border:3px solid var(--primary-neon);
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    padding: 50px;
+    justify-content:center;
+    text-transform:uppercase;
+    font-size: 7vw;
+    text-align: center;
+    font-weight:bold;
+    box-shadow:var(--neon-shadow);
+    animation:flicker 2s linear infinite;
+  }
+  
+  @keyframes flicker {
+    0% {
+      box-shadow:var(--neon-shadow);
+    }
+    45% {
+      box-shadow:var(--neon-shadow-pulse);
+    }
+    90% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+      color:var(--primary-neon);
+      text-shadow:var(--neon-shadow-text);
+    }
+    90.01% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+      color:var(--off-neon);
+      text-shadow:none;
+    }
+    94% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    94.01% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+    95% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+    95.01% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    95.5% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    95.51% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+    96% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+    96.01% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    96.5% {
+      box-shadow:none;
+      border-color:var(--off-neon);
+    }
+    96.51% {
+      box-shadow:var(--neon-shadow-bright);
+      border-color:var(--primary-neon);
+    }
+    100% {
+      box-shadow:var(--neon-shadow);
+      border-color:var(--primary-neon);
+    }
+  }
+
+  .button-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .date {
+    font-size: 40px;
+    color: rgba(231,131,243,.9);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: math;
+  }
+
+  .name {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    text-transform: uppercase;
+    z-index: 2000;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-around;
+    line-height: 45px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-inner {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .social-icons > img {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .social-icons > a {
+    height: 50px !important;
+    width: 50px !important;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+
+  @media screen and (max-width: 1000px) {
+
+    .contact {
+        flex-direction: column-reverse;
+    }
+  }
+
+  .footer {
+    text-align: right;
+    display: block;
+    margin-top: 50px;
+    padding: 5px;
+  }
