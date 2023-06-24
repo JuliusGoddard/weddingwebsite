@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<script src="main.js"></script>
 </head>
 <body>
     <nav class="nav">
@@ -34,7 +35,7 @@
     <img class="divider" src="images/divider1.gif">
     <div class="main-text">
         <h3>Ceremony</h3>
-        <h3>1600 - 1800</h3>
+        <h3>1500 - 1600</h3>
         <h4>St Albert's Catholic Chaplaincy</h4>
         <p>23 - 24 George Square</p>
         <p>Edinburgh</p>
@@ -45,7 +46,7 @@
     <img class="divider" src="images/divider1.gif">
     <div class="main-text" id="main-text">
         <h2>Reception</h2>
-        <h3>1800 - Late</h3>
+        <h3>1600 - Late</h3>
         <h4>The Counting House</h4>
         <p>34 W Nicolson St</p>
         <p>Newington</p>
@@ -120,5 +121,19 @@
         
     </div>
     <footer class="footer" id="contact">Website Designed by Julius Goddard</footer>
+    <script>
+        const divs = document.querySelectorAll(".divider")
+
+
+const observer = new IntersectionObserver(divs => {
+    divs.forEach(div => {
+        div.target.classList.toggle('show', entry.isIntersecting)
+    })
+})
+
+divs.forEach(div => {
+    observer.observe(div)
+})
+    </script>
 </body>
 </html>
